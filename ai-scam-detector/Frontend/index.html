@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scam  Detector </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Scam Message Detector</h1>
+        <textarea id="messageInput" placeholder="Enter the message to analyze..." rows="5" cols="50"></textarea>
+        <br><br>
+        <button onclick="checkScam()">Analyze</button>
+        <p id="result"></p>
+        <h2>Scam History</h2>
+        <ul id="history"></ul>
+       <button class="clear-btn" onclick="clearHistory()">
+    Clear History
+</button>
+<button onclick="downloadReport()">
+    Download Report
+</button>
+<button onclick="resetForm()">
+    Reset
+</button>
+<button id="themeBtn" onclick="toggleTheme()">
+    🌙 Dark Mode
+</button>
+<h3>Total Scans: <span id="scanCount">0</span></h3>
+<div id="riskBarContainer">
+    <div id="riskBar"></div>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
