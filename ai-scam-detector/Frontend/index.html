@@ -29,6 +29,8 @@
             <i class="fa-brands fa-bitcoin"></i> Crypto &nbsp;&nbsp;
             <i class="fa-solid fa-building-columns"></i> IBAN
         </h5>
+        <button onclick="checkScam()"> Analyze</button>
+    <button onclick="resetForm()">Reset</button>
     </div>
    <div class="report">
         <h3>Report scams to help others</h3>
@@ -41,37 +43,82 @@
     </button>
     </div>
     </div>
-    <br><br>
-
-    <button onclick="checkScam()"> Analyze</button>
-    <button onclick="resetForm()">Reset</button>
-    <button onclick="downloadReport()"> Download Report</button>
-    <button id="themeBtn" onclick="toggleTheme()"> Dark Mode</button>
-
-    <div class="card">
+    <div class="row">
+        <h4>Discover more: </h4>
+        <h6 style="margin-top: 3px;">Manual check | Claim your business  | Download apps</h6>
+    </div>
+<div class="cards-container">
+ <div class="card1" style="background-color:white">
         <h2>Analysis Result</h2>
         <p id="result"></p>
+        <button  class="download-btn" onclick="downloadReport()"> Download Report</button>
     </div>
-
-    <div class="card">
-        <h2>Risk Meter</h2>
-
-        <div id="riskBarContainer">
-            <div id="riskBar"></div>
-        </div>
-    </div>
-
-    <div class="card">
+<div class="card2" style="background-color:#f4f6f9;">
         <h2>Scan History</h2>
-
+        <p style="margin-top:30px;">Review past scans and stay protected from online scams.</p>
         <ul id="history"></ul>
 
         <button class="clear-btn" onclick="clearHistory()">
             Clear History
         </button>
     </div>
-
 </div>
-<script src="script.js"></script>
-</body>
-</html>
+    <div class="card">
+        <h2>Risk Meter</h2>
+        <div id="riskBarContainer">
+            <div id="riskBar"></div>
+        </div>
+    </div>
+    <section class="learn-scams">
+
+    <h2 class="title">Learn about scams</h2>
+
+    <div class="row1">
+
+        <div class="card">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <h3>Online Shopping</h3>
+        </div>
+
+        <div class="card">
+            <i class="fa-regular fa-credit-card"></i>
+            <h3>Financial Sites</h3>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-venus-mars"></i>
+            <h3>Adult & Dating Sites</h3>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>Gambling & Betting</h3>
+        </div>
+
+    </div>
+
+    <div class="row2">
+
+        <div class="card">
+            <i class="fa-solid fa-building"></i>
+            <h3>Employment Sites</h3>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-film"></i>
+            <h3>Entertainment Sites</h3>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-plus"></i>
+            <h3>All Reliable Sites</h3>
+        </div>
+
+    </div>
+
+</section>
+   </div>
+    <script src="script.js"></script>
+    </body>
+    
+    </html>
