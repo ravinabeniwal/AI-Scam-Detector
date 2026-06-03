@@ -94,7 +94,7 @@ setTimeout(() => {
     warning.push("Contains Link");
   }
   if (score >= 3) {
-    result.style.backgroundColor = "red";
+    result.style.backgroundColor = "#cc1517";
     result.style.color = "white";
     result.innerHTML = `"Scam Message Detected"; <br><br>
         Risk Score=${score}/10 <br><br>
@@ -129,7 +129,7 @@ setTimeout(() => {
         `;
   }
    else if (score >= 1) {
-    result.style.backgroundColor = "orange";
+    result.style.backgroundColor = "#FF7900";
     result.style.color = "black";
     result.innerHTML = `
         "Scam Message Detected"; <br><br>
