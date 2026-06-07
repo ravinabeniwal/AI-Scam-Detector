@@ -5,6 +5,24 @@ function checkScam() {
   document.getElementById("scanCount").innerText = totalScans;
   let message = document.getElementById("messageInput").value.toLowerCase();
   let time = new Date().toLocaleTimeString();
+  console.log("Sending request:", message);
+fetch("http://localhost:5000/analyze", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    message: message
+  })
+})
+.then(data => {
+    console.log("Backend Response:", data);
+
+    loadHistory();
+})
+.catch(error => {
+  console.error("Fetch Error:", error);
+});
   let scamwords = [
     "hacked",
     "urgently",
@@ -27,6 +45,8 @@ function checkScam() {
       foundwords.push(word);
     }
   }
+ 
+
   let mostDangerous = foundwords[0] || "None";
   
   let result = document.getElementById("result");
@@ -59,6 +79,11 @@ setTimeout(() => {
   }
 
   let history = document.getElementById("history");
+  fetch("http://localhost:5000/history")
+.then(res => res.json())
+.then(data => {
+    console.log(data);
+});
   if (
     message.includes("http://") ||
     message.includes("https://") ||
@@ -231,3 +256,56 @@ function toggleTheme(){
         btn.innerText = "🌙 Dark Mode";
     }
 }
+function loadHistory() {
+
+    fetch("http://localhost:5000/history")
+    .then(res => res.json())
+    .then(data => {
+
+        let history = document.getElementById("history");
+      
+        history.innerHTML = "";
+
+        data.forEach(scan => {
+
+            history.innerHTML += `
+                <li>
+                    <strong>${scan.result}</strong><br>
+                    ${scan.message}<br>
+                    Score: ${scan.riskScore}
+                    <hr>
+                </li>
+            `;
+
+        });
+
+    })
+    .catch(err => console.error(err));
+    console.log("History Element:", document.getElementById("history"));
+}
+window.onload = loadHistory;
+function reportScam() {
+    console.log("Report button clicked");
+
+    let message = document.getElementById("messageInput").value;
+
+  fetch("http://localhost:5000/report", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        message: message,
+        category: "User Report"
+    })
+})
+.then(async response => {
+
+    console.log("Status:", response.status);
+
+    const text = await response.text();
+
+    console.log("Response:", text);
+
+})
+.catch(err => console.error(err)); }
