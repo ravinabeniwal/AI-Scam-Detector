@@ -1,0 +1,319 @@
+/* ===== BODY ===== */
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== NAVBAR ===== */
+
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-bar h2{
+    margin: 0;
+}
+
+/* ===== CONTAINER ===== */
+
+.container{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+/* ===== BUTTONS ===== */
+
+button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    color: white;
+    background-color: #cc1517;
+}
+
+/* ===== TEXTAREA ===== */
+
+textarea{
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* ===== SCAN & REPORT SECTION ===== */
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.scams,
+.report{
+    flex: 1;
+    max-width: 500px;
+
+    background: white;
+    padding: 20px;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.scams h2,
+.report h3{
+    text-align: center;
+}
+
+.report{
+    text-align: center;
+}
+
+/* ===== RESULT & HISTORY ===== */
+
+.card1,
+.card2{
+    flex: 1;
+    max-width: 500px;
+
+    background: white;
+
+    padding: 20px;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.card2{
+    text-align: center;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* margin-top: 10px; */
+}
+
+.download-btn{
+    margin-top: 70px;
+    margin-left:130px;
+}
+
+#history{
+    background: white;
+    color: black;
+}
+
+/* ===== RISK BAR ===== */
+
+.risk{
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+#riskBarContainer{
+    width: 100%;
+    height: 20px;
+
+    background: lightgray;
+
+    border-radius: 10px;
+}
+
+#riskBar{
+    width: 0%;
+    height: 100%;
+
+    background: #cc1517;
+
+    border-radius: 10px;
+}
+
+/* ===== LEARN ABOUT SCAMS ===== */
+
+.learn-scams{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.learn-title{
+    color: #555;
+}
+
+.row1,
+.row2{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.row2{
+    margin-top: 20px;
+}
+
+.card{
+    width: 170px;
+    height: 150px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card i{
+    font-size: 30px;
+    color: #cc1517;
+}
+
+.card h3{
+    color: #cc1517;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ===== DATABASE ===== */
+
+.database{
+    width: 100%;
+    background-color: #cc1517;
+    padding: 40px 20px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.database-title{
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 0.1em;
+}
+
+.row3,
+.row4{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.row4{
+    margin-top: 20px;
+}
+
+.cards{
+    width: 220px;
+    height: 150px;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.cards:hover{
+    transform: translateY(-5px);
+}
+
+.cards h2{
+    color: #cc1517;
+    margin: 0;
+    font-size: 22px;
+}
+
+.cards h5{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+    width: 100%;
+
+    background: #4a4a4a;
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    padding: 50px 20px;
+
+    box-sizing: border-box;
+}
+
+.footer-section{
+    width: 250px;
+}
+
+.footer-section h3{
+    font-size: 18px;
+}
+
+.footer-section p{
+    font-size: 14px;
+}
+
+.footer-bottom{
+    width: 100%;
+    background: #d80000;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+.social-icons{
+    margin-bottom: 15px;
+}
+
+.social-icons i{
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.social-icons i:hover{
+    transform: scale(1.2);
+}
+.social-icons a{
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover{
+    color: #d80000;
+}

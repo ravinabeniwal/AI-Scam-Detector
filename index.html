@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scam  Detector </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body> 
+    <div class="container">
+        <nav  class="nav-bar" ><h2 style="margin-left: 10%;">🛡️ AI Scam Detector</h2></nav>
+        <br> <br> <br> <br>
+   <p style="text-align: center; font-size: 48px; margin: 0;"><strong>Your Anti-Scam Partner, </strong> </p>
+  <p style="text-align: center; font-size: 48px;  margin: 0;"><strong>Keeping You Safe!</strong></p>
+    <p style="text-align: center;">Quick check for scams, and report scams with a single click to help protect others</p>
+
+    <h3>Total Scans: <span id="scanCount">0</span></h3>
+    <div class="cards-container">
+    <div class="scams">
+        <h2>Quick check for scams</h2>
+       <textarea
+            id="messageInput"
+            placeholder="Enter message, email, or website URL..."
+            rows="3"
+            cols="30"></textarea>
+        <h5>
+            <i class="fa-solid fa-globe"></i> Website &nbsp;&nbsp;
+            <i class="fa-solid fa-phone"></i> Phone &nbsp;&nbsp;
+            <i class="fa-brands fa-bitcoin"></i> Crypto &nbsp;&nbsp;
+            <i class="fa-solid fa-building-columns"></i> IBAN
+        </h5>
+        <button onclick="checkScam()"> Analyze</button>
+    <button onclick="resetForm()">Reset</button>
+    </div>
+   <div class="report">
+        <h3>Report scams to help others</h3>
+        <br>
+        <p style="text-align: center;">
+          Share your experience and protect the community
+        </p>
+  <button onclick="reportScam()">
+    Report Scam
+</button>
+    </div>
+    </div>
+    <div class="row">
+        <h4>Discover more: </h4>
+        <h6 style="margin-top: 26px;">Manual check | Claim your business  | Download apps</h6>
+    </div>
+<div class="cards-container">
+ <div class="card1" style="background-color:white">
+        <h2 style="text-align: center;">Analysis Result</h2>
+        <p id="result"></p>
+        <button  class="download-btn" onclick="downloadReport()"> Download Report</button>
+    </div>
+<div class="card2" style="background-color:#f4f6f9;">
+        <h2>Scan History</h2>
+        <p style="margin-top:30px;">Review past scans and stay protected from online scams.</p>
+        <ul id="history"></ul>
+
+        <button class="clear-btn" onclick="clearHistory()">
+            Clear History
+        </button>
+    </div>
+</div>
+    <div class="risk">
+        <h2>Risk Meter</h2>
+        <div id="riskBarContainer">
+            <div id="riskBar"></div>
+        </div>
+    </div>
+    <section class="learn-scams">
+    <h2 class="learn-title">Learn about scams</h2>
+    <div class="row1">
+        <div class="card">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <h3>Online Shopping</h3>
+        </div>
+        <div class="card">
+            <i class="fa-regular fa-credit-card"></i>
+            <h3>Financial Sites</h3>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-venus-mars"></i>
+            <h3>Adult & Dating Sites</h3>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>Gambling & Betting</h3>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="card">
+            <i class="fa-solid fa-building"></i>
+            <h3>Employment Sites</h3>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-film"></i>
+            <h3>Entertainment Sites</h3>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-plus"></i>
+            <h3>All Reliable Sites</h3>
+        </div>
+    </div>
+</section>
+ <section class="database">
+    <h2 class="database-title">The Biggest Database of Scams</h2>
+    <div class="row3">
+        <div class="cards">
+            <h2>111.7 M</h2>
+            <h5>Webpages in Database</h5>
+        </div>
+        <div class="cards">
+            <h2>11 M</h2>
+            <h5>Scam Website</h5>
+            </div>
+            <div class="cards">
+                <h2>346359</h2>
+                <h5>Visits Last Day</h5>
+            </div>
+            <div class="cards">
+                <h2>77.8 K</h2>
+                <h5>Webpages Scanned Yesterday</h5>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="cards">
+                <h2>9228</h2>
+                <h5>Scams Reported Yesterday</h5>
+            </div>
+            <div class="cards">
+                <h2>720.5 M</h2>
+                <h5>Webpages checked</h5>
+            </div>
+            </div>
+            </section>
+             </div>
+             <br> <br> <br> <br>
+            <footer class="footer">
+    <div class="footer-section">
+        <h3>AI Scam Detector</h3>
+        <p>Detect suspicious messages, links, and websites with ease.</p>
+        <p>Stay safe from online scams and phishing attacks.</p>
+    </div>
+    <div class="footer-section">
+        <h3>Features</h3>
+        <p>Scam Detection</p>
+        <p>Risk Meter</p>
+        <p>Scan History</p>
+        <p>Download Reports</p>
+    </div>
+
+    <div class="footer-section">
+        <h3>Developer</h3>
+        <p>Ravina Beniwal</p>
+        <p>B.Tech Project</p>
+        <p>Cyber Security & Web Development</p>
+    </div>
+</footer>
+<div class="footer-bottom">
+    <div class="social-icons">
+    <a href="https://github.com/ravinabeniwal" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/ravina-beniwal-0279b8328/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="mailto:ravinabeniwal390@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+</div>
+    <p>© 2026 AI Scam Detector | 2nd Year Project</p>
+</div>
+       <script src="script.js"></script>
+        </body>
+    </html>
