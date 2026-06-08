@@ -10,12 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(
-  "mongodb+srv://ai-scam-detector:ff2SKuRxBoF1dOyG@cluster0.3rrn0y7.mongodb.net/aiscamdetector?retryWrites=true&w=majority&appName=Cluster0"
-)
-.then(() => console.log("MongoDB Connected"))
-.catch(err => console.log("MongoDB Error:", err));
 
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log("MongoDB Error:", err));
 // Home Route
 app.get("/", (req, res) => {
   res.send("AI Scam Detector Backend Running");
